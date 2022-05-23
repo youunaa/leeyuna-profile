@@ -36,3 +36,103 @@
     transform: rotate(360deg);
   }
 }
+
+.project {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.intro {
+  font-weight: 400;
+  text-align: left; 
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 1rem;
+  margin-bottom: 0px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.first.project {
+  border-bottom: none;
+}
+
+.title {
+  margin-top: 0;
+  color: #444;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 23px;
+  text-align: left;
+  font-family: "Malgun Gothic",dotum,gulim,sans-serif;
+}
+
+.title .indetail {
+  padding-left: 18px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.title .indetail .bar {
+  width: auto;
+  height: auto;
+  margin: 0 0 0 11px;
+  background: none;
+}
+
+.title .indetail .bar {
+  display: inline-block;
+  position: relative;
+  padding-left: 11px;
+  margin-left: 11px;
+}
+
+.title .indetail span > em {
+  display: inline-block;
+  margin: 0 2px 0 3px;
+  color: #fe6854;
+  font-weight: bold;
+}
+
+.title .indetail .bar:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 1px;
+  height: 10px;
+  background: #cacaca;
+}
+
+em {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+.client-name {
+  margin-right: 4px;
+  display: none;
+}
+
+.service.link {
+  cursor: pointer;
+  color: inherit;
+  word-wrap: break-word;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+  border-bottom: 0.05em solid rgba(55,53,47,0.4);
+}
+
+.site.link {
+  border-bottom: 0.05em solid rgba(55,53,47,0.4);
+  cursor: pointer;
+  color: inherit;
+  word-wrap: break-word;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+  opacity: 0.7;
+}
