@@ -1,6 +1,8 @@
 import './App.css';
 import './badge.css';
 import profileImg from './profile3.jpg';
+import emgram from './emgram.png';
+import jplus from './jplus.PNG';
 
 function App() {
 
@@ -9,14 +11,16 @@ function App() {
          <div className="container">
             <section>
                <h1>
-                 데이터로 일하는 개발자<span className="period-mark">.</span>
+                  <span role="img">📢</span>
+                  소통하는 개발자 이유나 입니다.
+                  {/* <span className="period-mark">.</span> */}
                </h1>
                <h5 className="intro">
-                  3년차, 데이터로 일하는 개발자 이유나입니다.
+                  3년차, 개발자 이유나입니다.
                </h5>
                <div className="row">
                   <div className="row-left">
-                     <img src={profileImg} alt="profile" className="profile-img"/>
+                     <img src={profileImg} alt="profile" className="profile-img" />
                   </div>
                   <div className="row-right">
                      <div className="first project">
@@ -24,8 +28,21 @@ function App() {
                            Contact<span className="period-mark">.</span>
                         </h5>
                         <ul>
-                           <li>Email. yn060312@gmail.com</li>
-                           <li>Phone. 01041595045</li>
+                           <li>
+                              <span role="img" alt="email">🙎‍♀️</span>
+                              <span style={{ fontWeight: 'bold', fontSize: '0.96em' }}>이름</span>
+                              <span className="period-mark">.</span> 이유나
+                           </li>
+                           <li>
+                              <span role="img" alt="email">✉️</span>
+                              <span style={{ fontWeight: 'bold', fontSize: '0.96em' }}>이메일</span>
+                              <span className="period-mark">.</span> yn060312@gmail.com
+                           </li>
+                           <li>
+                              <span role="img" alt="email">📞</span>
+                              <span style={{ fontWeight: 'bold', fontSize: '0.96em' }}>연락처</span>
+                              <span className="period-mark">.</span> 010-4159-5045
+                           </li>
                         </ul>
                         <h5>
                            Channel<span className="period-mark">.</span>
@@ -37,45 +54,71 @@ function App() {
                      </div>
                   </div>
                </div>
-               <h2 className="subject">Introduce<span className="period-mark">.</span></h2>
+               <h2 className="subject">
+                  Introduce<span className="period-mark">.</span>
+               </h2>
                <p className="big-paragraph">
-                  7년 차 개발자로 스타트업에서 웹과 앱 서비스를 개발/배포/운영하였습니다. 주로 웹 개발을 담당했으며 필요에 따라 PO(Product Owner) 역할을 겸하였습니다. 작은 규모의 팀에 첫 번째 개발자로 입사하여 50억 투자를 유치하고 40명 규모의 팀으로 성장할 때까지 필요한 기술 역량을 책임졌던 경험이 있습니다. 
-                  <br/><br/>
-                  비즈니스 성장에 기여하는 일을 최우선으로 합니다. 이를 위해 빠르게 개발하고 배포하여 딜리버리하는 역량과 데이터를 활용하여 유저를 이해하는 역량을 쌓고자 노력해왔습니다. 또한, 큰 임팩트는 혼자가 아닌 함께 만들 수 있다고 생각하기에 다양한 직무의 구성원들과 적극적으로 커뮤니케이션하며 협업해왔습니다.
-                  <br/><br/>
-                  반복되는 일을 자동화하고 비효율적인 프로세스를 개선하는 일을 좋아합니다. 운영팀의 단순/루틴 업무 시간을 줄이기 위해 지속적으로 백오피스를 개발하여 운영팀 업무 시간을 주당 70시간 이상 줄였던 경험이 있습니다.
+                  3년 차 개발자로 프론트엔드, 백엔드개발을 하였습니다.<br />
+                  O2O, 모빌리티, 채팅 웹, e커머스, 블록체인 등
+                  <span style={{ fontWeight: 'bold' }}>    다양한 플랫폼의 <br />서비스에 대한 경험을 보유</span>
+                  하고 있습니다.
+                  <br /><br /><br />
+
+                  <span style={{ fontWeight: 'bold' }}>비즈니스 주요 로직에 기여하는 일을 좋아합니다.</span><br />
+                  중요한 업무를 맡았을 때 집중도도 올라가고 복잡한 시스템을 들여다볼 수 있고<br />
+                  생각하는 범위와 고려해야 하는 상황이 많기 때문에 일을 하면서<br />
+                  사고가 넓어지는 경험을 하며 스스로 성장해갔습니다.<br /><br /><br />
+
+                  <span style={{ fontWeight: 'bold' }}> 협업에 강합니다.</span><br />
+                  다른 사람과 협업하고, 도움을 요청하는 오픈 마인드도 경쟁력이라고 생각합니다.<br />
+                  팀과 프로젝트 리더 간의 소통에서 같은 것을 이해하고,  <br />
+                  같은 방향으로 나아가고 있는지 꾸준히 확인하며 이야기하고, <br />
+                  어려운 일이라도 많은 사람과 의견을 나누면 짧은 시간에 <br />
+                  보다, 많은 문제를 해결하는 효율적인 결과가 나오는 <br />
+                  경험을 했고, 함께 할 때 시너지를 낼 수 있는 집단에서 일을 했습니다.
                </p>
             </section>
+            
+            <section>
+               <h2 className="subject">
+                  Skill<span className="period-mark">.</span>
+               </h2>
+               <ul style={{ fontWeight: '500' }}>
+                  <li>Front-End: JavaScript, Vue.js</li>
+                  <li>Back-End: Spring Boot, Spring Framework</li>
+                  <li>Database: PostgreSQL, MySQL</li>
+               </ul>
+            </section>
+
             <section>
                <h2 className="subject">
                   Work Experience<span className="period-mark">.</span>
                </h2>
                <div className="row">
                   <div className="row-left">
-                     <h3>(주)엠그램<span className="period-mark">.</span>
+                     <h3>
+                        <img src={emgram} alt="profile" style={{ verticalAlign: 'middle', width: '25px' }} />
+                        &nbsp;(주)엠그램<span className="period-mark">.</span>
                      </h3>
                      <span className="role">Web Developer</span>
                      <span>
-                        <time datetime="2020-08">2020. 03</time> - 2022. 05
+                        <time>2020. 03</time> - 2022. 05
+                     </span>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        e-chain<span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2022.02</time>~2022.05(3개월)
                      </span>
                   </div>
                   <div className="row-right">
-                     <div className="project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ KT ]</span>
-                              <span className="project-name">e-chain</span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2022.02</time>~2022.05(3개월)
-                        </span>
-                        {/* <h5>
-                           발주처<span className="period-mark">.</span>
-                        </h5>
-                        <p>KT</p> */}
-                        
+                     <div className="first project">
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
@@ -99,17 +142,21 @@ function App() {
                            <span className="mr-1 badge badge-secondary">Wildfly 14.0</span>
                         </p>
                      </div>
-                     <div className="project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ KT ]</span>
-                              <span className="project-name">MEG-LE</span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2021.08</time> - 2022.02(7개월)
-                        </span>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        MEG-LE<span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2021.08</time> - 2022.02(7개월)
+                     </span>
+                  </div>
+                  <div className="row-right">
+                     <div className="first project">
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
@@ -121,7 +168,7 @@ function App() {
                         </h5>
                         <ul>
                            <li>레거시 Portal을 신규&nbsp;
-                              <a className='site link' 
+                              <a className='site link'
                                  target={'_blank'}
                                  rel="noopener noreferrer"
                                  href="https://gigaenergy.kt.com"
@@ -147,30 +194,33 @@ function App() {
                            <span className="mr-1 badge badge-secondary">Vue.js</span>
                         </p>
                      </div>
-                     <div className="project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ kt alpha ]</span>
-                              <span className="project-name">
-                                 <a className='service link' 
-                                    target={'_blank'}
-                                    rel="noopener noreferrer"
-                                    href='http://isearch.interpark.com/isearch?q=k%EC%87%BC%ED%95%91'
-                                 >
-                                    K쇼핑
-                                 </a>
-                              </span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2021.04</time>~2021.07(4개월)
-                        </span>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        <a className='service link'
+                           target={'_blank'}
+                           rel="noopener noreferrer"
+                           href='http://isearch.interpark.com/isearch?q=k%EC%87%BC%ED%95%91'
+                        >
+                           K쇼핑
+                        </a>
+                        <span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2021.04</time>~2021.07(4개월)
+                     </span>
+                  </div>
+                  <div className="row-right">
+                     <div className="first project">
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
                         <p>
-                        인터파크 제휴사 K쇼핑 입점개발
+                           인터파크 제휴사 K쇼핑 입점개발
                         </p>
                         <h5>
                            업무<span className="period-mark">.</span>
@@ -188,19 +238,21 @@ function App() {
                            <span className="mr-1 badge badge-secondary">Oracle DB</span>
                         </p>
                      </div>
-                     <div className="project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ 한화 ]</span>
-                              <span className="project-name">
-                                 한화생명 LCP
-                              </span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2020.12</time>~2021.03(4개월)
-                        </span>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        한화생명 LCP<span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2020.12</time>~2021.03(4개월)
+                     </span>
+                  </div>
+                  <div className="row-right">
+                     <div className="first project">
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
@@ -226,22 +278,26 @@ function App() {
                            <span className="mr-1 badge badge-secondary">Vue.js</span>
                         </p>
                      </div>
-                     <div className="project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ 국책과제 ]</span>
-                              <span className="project-name">T-MaaS</span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2021.04</time>~2021.07(4개월)
-                        </span>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        T-MaaS<span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2021.04</time>~2021.07(4개월)
+                     </span>
+                  </div>
+                  <div className="row-right">
+                     <div className="first project">
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
                         <p>
-                           스마트 관광을 위한 모빌리티 서비스<br/>
+                           스마트 관광을 위한 모빌리티 서비스<br />
                            관광객 여정에 따른 기사 추천 및 매핑 서비스, 오디오 가이드 등
                         </p>
                         <h5>
@@ -263,25 +319,21 @@ function App() {
                            <span className="mr-1 badge badge-secondary">Vue.js</span>
                         </p>
                      </div>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        제클린<span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2020.03</time>~2020.06(4개월)
+                     </span>
+                  </div>
+                  <div className="row-right">
                      <div className="first project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ JeCLEAN ]</span>
-                              <span className="project-name">
-                                 <a className='service link' 
-                                    target={'_blank'}
-                                    rel="noopener noreferrer"
-                                    href='https://www.jeclean.com/'
-                                 >
-                                 제클린
-                                 </a>
-                              </span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2020.03</time>~2020.06(4개월)
-                        </span>
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
@@ -308,38 +360,41 @@ function App() {
                      </div>
                   </div>
                </div>
+
                <div className="row">
                   <div className="row-left">
                      <h3>
+                        <img src={jplus} alt="profile" style={{ verticalAlign: 'middle', width: '50px', marginRight: '11px' }} />
                         제이플러스
                         <span className="period-mark">.</span>
                      </h3>
                      <span className="role">Web Developer</span>
                      <span>
-                        <time datetime="2018-12">2019. 11</time> - 2020. 02
+                        <time>2019. 11</time> - 2020. 02
+                     </span>
+                  </div>
+               </div>
+
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        <a className='service link'
+                           target={'_blank'}
+                           rel="noopener noreferrer"
+                           href='https://www.foodlife-edu.or.kr/main.do'
+                        >
+                           식생활교실
+                        </a>
+                        <span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2019.12</time>~2020.02(3개월)
                      </span>
                   </div>
                   <div className="row-right">
-                     <div className="project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ EPIS ]</span>
-                              <span className="project-name">
-                                 <a className='service link' 
-                                    target={'_blank'}
-                                    rel="noopener noreferrer"
-                                    href='https://www.foodlife-edu.or.kr/main.do'
-                                 >
-                                 식생활교실
-                                 </a>
-                              </span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2019.12</time>~2020.02(3개월)
-                        </span>
-                        <h5>
+                     <div className="first project">
+                     <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
                         <p>
@@ -363,30 +418,32 @@ function App() {
                            <span className="mr-1 badge badge-secondary">MySQL</span>
                         </p>
                      </div>
+                  </div>
+               </div>
+               <div className="row">
+                  <div className="row-left">
+                     <h3>
+                        <a className='service link'
+                           target={'_blank'}
+                           rel="noopener noreferrer"
+                           href='https://edu.merti.or.kr/user/Main.do'
+                        >
+                           해양환경교육센터
+                        </a>
+                        <span className="period-mark">.</span>
+                     </h3>
+                     <span className="role">Web Developer</span>
+                     <span>
+                        <time>2019.11</time>~2020.01(3개월)
+                     </span>
+                  </div>
+                  <div className="row-right">
                      <div className="first project">
-                        <h4>
-                           <span>
-                              <span className="client-name">[ EPIS ]</span>
-                              <span className="project-name">
-                                 <a className='service link' 
-                                    target={'_blank'}
-                                    rel="noopener noreferrer"
-                                    href='https://edu.merti.or.kr/user/Main.do'
-                                 >
-                                 해양환경교육센터
-                                 </a>
-                              </span>
-                           </span>
-                           <span className="period-mark">.</span>
-                        </h4>
-                        <span className="time">
-                           <time datetime="2020-08">2019.11</time>~2020.01(3개월)
-                        </span>
                         <h5>
                            서비스<span className="period-mark">.</span>
                         </h5>
                         <p>
-                           해양환경, 맞춤형 개발환경, 바다사랑, 현장, 실무능력등의 교육신청 및 체험 일정관리 플랫폼 
+                           해양환경, 맞춤형 개발환경, 바다사랑, 현장, 실무능력등의 교육신청 및 체험 일정관리 플랫폼
                         </p>
                         <h5>
                            업무<span className="period-mark">.</span>
@@ -409,6 +466,7 @@ function App() {
                   </div>
                </div>
             </section>
+
             <section>
                <h2 className="subject">
                   Other Experiences<span className="period-mark">.</span>
@@ -419,7 +477,7 @@ function App() {
                   </h3>
                   <span className="role">더조은컴퓨터아트학원</span>
                   <span className="time">
-                     <time datetime="2013-11">2019.03</time> - 2019.09 (6개월)
+                     <time>2019.03</time> - 2019.09 (6개월)
                   </span>
                   <p>
                      자바, 파이썬을 활용한 빅데이터 플랫폼 개발자 양성 과정
@@ -431,24 +489,15 @@ function App() {
                   </h3>
                   <span className="role"></span>
                   <span className="time">
-                  <h3 className="title">학력<span className="indetail">최종학력
-                     <span className="bar">대학교<em>4년</em>졸업</span></span></h3>
-                     <time datetime="2010-03">2019.06</time> - 2021.08 국가평생교육진흥원대학교 (서울) 컴퓨터공학 전공
-                     <br/>
-                     <time datetime="2010-03">2017.03</time> - 2019.02 한림성심대학교 (강원) 정보통신네트워크과
+                     <h3 className="title">학력<span className="indetail">최종학력
+                        <span className="bar">대학교<em>4년</em>졸업</span></span></h3>
+                     <time>2019.06</time> - 2021.08 국가평생교육진흥원대학교 (서울) 컴퓨터공학 전공
+                     <br />
+                     <time>2017.03</time> - 2019.02 한림성심대학교 (강원) 정보통신네트워크과
                   </span>
                </div>
             </section>
-            <section>
-               <h2 className="subject">
-                  Skill<span className="period-mark">.</span>
-               </h2>
-               <ul style={{fontWeight:'500'}}>
-                  <li>Front-End: JavaScript, Vue.js</li>
-                  <li>Back-End: Spring Boot, Spring Framework</li>
-                  <li>Database: PostgreSQL, MySQL</li>
-               </ul>
-            </section>
+            
          </div>
       </div>
    );
