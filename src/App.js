@@ -1,6 +1,4 @@
-import './assets/css/App.css';
-import './assets/css/badge.css';
-import * as React from 'react';
+import React from 'react';
 
 import profileImg from './assets/image/profile3.jpg';
 import emgram from './assets/image/emgram.png';
@@ -8,12 +6,14 @@ import jplus from './assets/image/jplus.PNG';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import Skill from './mock/skill.js';
+import myInfo from './mock/myInfo.js';
 
 function App() {
 
@@ -23,13 +23,28 @@ function App() {
       setExpanded(isExpanded ? panel : true);
    };
 
+   const FrontEnd = Skill.FrontEnd;
+   const BackEnd = Skill.BackEnd;
+   const Database = Skill.Database;
+
+   function skillList(skill) {
+      var result = '';
+      for (let i = 0; i < skill.length; i++) {
+         result += skill[i];
+         if (i < skill.length - 1) {
+            result += ', ';
+         }
+      }
+      return result;
+   };
+
    return (
       <div className="App">
          <div className="container">
             <section>
                <h1>
                   <span role="img">📢</span>
-                  소통하는 개발자 이유나 입니다
+                  {myInfo.keyWord}
                   <span className="period-mark">.</span>
                </h1>
             </section>
@@ -40,7 +55,7 @@ function App() {
                </h2>
                <Card sx={{ minWidth: 275 }}>
                   <CardContent>
-                     <div className="last row" style={{ padding: '30px' }}>
+                     <div className="last row">
                         <div className="row-left">
                            <img src={profileImg} alt="profile" className="profile-img" />
                         </div>
@@ -52,26 +67,42 @@ function App() {
                               <ul>
                                  <li>
                                     <span role="img" alt="email">🙎‍♀️</span>
-                                    <span style={{ fontWeight: 'bold', fontSize: '0.96em' }}>이름</span>
-                                    <span className="period-mark">.</span> 이유나
+                                    <span className='strong'>
+                                       이름<span className="period-mark">.</span>
+                                    </span>
+                                    {myInfo.name}
                                  </li>
                                  <li>
                                     <span role="img" alt="email">✉️</span>
-                                    <span style={{ fontWeight: 'bold', fontSize: '0.96em' }}>이메일</span>
-                                    <span className="period-mark">.</span> yn060312@gmail.com
+                                    <span className='strong'>
+                                       이메일<span className="period-mark">.</span>
+                                    </span>
+                                    {myInfo.email}
                                  </li>
                                  <li>
                                     <span role="img" alt="email">📞</span>
-                                    <span style={{ fontWeight: 'bold', fontSize: '0.96em' }}>연락처</span>
-                                    <span className="period-mark">.</span> 010-4159-5045
+                                    <span className='strong'>
+                                       연락처<span className="period-mark">.</span>
+                                    </span>
+                                    {myInfo.phone}
                                  </li>
                               </ul>
                               <h5>
                                  Channel<span className="period-mark">.</span>
                               </h5>
                               <ul>
-                                 <li>Blog. https://naver.com</li>
-                                 <li>Github. https://github.com</li>
+                                 <li>
+                                    <span className='strong'>
+                                       Blog<span className="period-mark">.</span>
+                                    </span>
+                                    {myInfo.blog}
+                                 </li>
+                                 <li>
+                                    <span className='strong'>
+                                       Github<span className="period-mark">.</span>
+                                    </span>
+                                    {myInfo.github}
+                                 </li>
                               </ul>
                            </div>
                         </div>
@@ -88,24 +119,8 @@ function App() {
                <Card sx={{ minWidth: 275 }}>
                   <CardContent>
                      <p className="big-paragraph">
-                        3년 차 개발자로 프론트엔드, 백엔드개발을 하였습니다.<br />
-                        O2O, 모빌리티, 채팅 웹, e커머스, 블록체인 등
-                        <span style={{ fontWeight: 'bold' }}>    다양한 플랫폼의 <br />서비스에 대한 경험을 보유</span>
-                        하고 있습니다.
-                        <br /><br /><br />
-
-                        <span style={{ fontWeight: 'bold' }}>비즈니스 주요 로직에 기여하는 일을 좋아합니다.</span><br />
-                        중요한 업무를 맡았을 때 집중도도 올라가고 복잡한 시스템을 들여다볼 수 있고<br />
-                        생각하는 범위와 고려해야 하는 상황이 많기 때문에 일을 하면서<br />
-                        사고가 넓어지는 경험을 하며 스스로 성장해갔습니다.<br /><br /><br />
-
-                        <span style={{ fontWeight: 'bold' }}> 협업에 강합니다.</span><br />
-                        다른 사람과 협업하고, 도움을 요청하는 오픈 마인드도 경쟁력이라고 생각합니다.<br />
-                        팀과 프로젝트 리더 간의 소통에서 같은 것을 이해하고,  <br />
-                        같은 방향으로 나아가고 있는지 꾸준히 확인하며 이야기하고, <br />
-                        어려운 일이라도 많은 사람과 의견을 나누면 짧은 시간에 <br />
-                        보다, 많은 문제를 해결하는 효율적인 결과가 나오는 <br />
-                        경험을 했고, 함께 할 때 시너지를 낼 수 있는 집단에서 일을 했습니다.
+                        <div dangerouslySetInnerHTML={{ __html: myInfo.indtroduce }}>
+                        </div>
                      </p>
                   </CardContent>
                </Card>
@@ -116,11 +131,30 @@ function App() {
                   Skill<span className="period-mark">.</span>
                </h2>
                <Card sx={{ minWidth: 275 }}>
-                  <CardContent style={{ padding: '30px' }}>
-                     <ul style={{ fontWeight: '500' }}>
-                        <li>Front-End: JavaScript, Vue.js</li>
-                        <li>Back-End: Spring Boot, Spring Framework</li>
-                        <li>Database: PostgreSQL, MySQL</li>
+                  <CardContent>
+                     <ul>
+                        <li>
+                           <span className='strong'>
+                              Front-End<span className="period-mark">.</span>
+                           </span>
+                           {skillList(FrontEnd)}
+                        </li>
+                     </ul>
+                     <ul>
+                        <li>
+                           <span className='strong'>
+                              Back-End<span className="period-mark">.</span>
+                           </span>
+                           {skillList(BackEnd)}
+                        </li>
+                     </ul>
+                     <ul>
+                        <li>
+                           <span className='strong'>
+                              Database<span className="period-mark">.</span>
+                           </span>
+                           {skillList(Database)}
+                        </li>
                      </ul>
                   </CardContent>
                </Card>
@@ -369,7 +403,14 @@ function App() {
                         <div className="last row">
                            <div className="row-left">
                               <h3>
-                                 제클린<span className="period-mark">.</span>
+                                 <a className='service link'
+                                    target={'_blank'}
+                                    rel="noopener noreferrer"
+                                    href='https://www.jeclean.com/'
+                                 >
+                                    제클린
+                                 </a>
+                                 <span className="period-mark">.</span>
                               </h3>
                               <span className="role">Web Developer</span>
                               <span>
@@ -475,7 +516,7 @@ function App() {
                               </div>
                            </div>
                         </div>
-                        <div className="first row">
+                        <div className="last row">
                            <div className="row-left">
                               <h3>
                                  <a className='service link'
