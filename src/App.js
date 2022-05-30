@@ -1,10 +1,10 @@
-import './App.css';
-import './badge.css';
+import './assets/css/App.css';
+import './assets/css/badge.css';
 import * as React from 'react';
 
-import profileImg from './profile3.jpg';
-import emgram from './emgram.png';
-import jplus from './jplus.PNG';
+import profileImg from './assets/image/profile3.jpg';
+import emgram from './assets/image/emgram.png';
+import jplus from './assets/image/jplus.PNG';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
