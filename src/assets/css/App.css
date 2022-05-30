@@ -144,8 +144,18 @@ em {
   padding: 30px;
 }
 
+.MuiAccordionSummary-content.MuiAccordionSummary-contentGutters.css-o4b71y-MuiAccordionSummary-content {
+  padding: 1rem;
+}
+
 .strong {
   font-weight: bold;
   font-size: 0.96em;
   margin-right: 10px;
+}
+
+.company-logo {
+  vertical-align: 'middle';
+  width: '25px';
+  margin-right: '3px';
 }
