@@ -27,7 +27,6 @@ function App() {
             <SkillComponent />
 
             <CompanyComponent />
-            {/* <ProjectComponent /> */}
 
             <section>
                <h2 className="subject">

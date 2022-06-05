@@ -148,6 +148,10 @@ em {
   padding: 1rem;
 }
 
+.MuiAccordionDetails-root.css-15v22id-MuiAccordionDetails-root {
+  padding: 30px;
+}
+
 .strong {
   font-weight: bold;
   font-size: 0.96em;
