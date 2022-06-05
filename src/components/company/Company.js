@@ -7,11 +7,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-import ProjectComponent from "../project/ProjectComponent";
+import Project from "../project/Project";
 
 import CompanyArr from '../../mock/company.js';
 
-class CompanyComponent extends Component {
+class Company extends Component {
 
     render() {
         return (
@@ -43,7 +43,7 @@ class CompanyComponent extends Component {
 
                             <AccordionDetails>
                                 <Typography>
-                                    <ProjectComponent
+                                    <Project
                                         projectList={JSON.stringify(company.project)}
                                     />
                                 </Typography>
@@ -56,4 +56,4 @@ class CompanyComponent extends Component {
     }
 }
 
-export default CompanyComponent;
+export default Company;

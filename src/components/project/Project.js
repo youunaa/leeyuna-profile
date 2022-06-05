@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-function ProjectComponent(props) {
+function Project(props) {
     const ProjectArr = JSON.parse(props.projectList);
 
     return (
@@ -57,4 +57,4 @@ function ProjectComponent(props) {
 }
 
 
-export default ProjectComponent;
+export default Project;

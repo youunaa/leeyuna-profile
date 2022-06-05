@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import myInfo from '../../mock/myInfo.js';
 
-class IntroduceComponent extends Component {
+class Introduce extends Component {
     render() {
         return (
             <section>
@@ -26,4 +26,4 @@ class IntroduceComponent extends Component {
     }
 }
 
-export default IntroduceComponent;
+export default Introduce;

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Skill from '../../mock/skill.js';
+import skillData from '../../mock/skill.js';
 
-const FrontEnd = Skill.FrontEnd;
-const BackEnd = Skill.BackEnd;
-const Database = Skill.Database;
+const FrontEnd = skillData.FrontEnd;
+const BackEnd = skillData.BackEnd;
+const Database = skillData.Database;
 
 function skillList(skill) {
     var result = '';
@@ -18,7 +18,7 @@ function skillList(skill) {
     return result;
 };
 
-class SkillComponent extends Component {
+class Skill extends Component {
     render() {
         return (
             <section>
@@ -58,4 +58,4 @@ class SkillComponent extends Component {
     }
 }
 
-export default SkillComponent;
+export default Skill;

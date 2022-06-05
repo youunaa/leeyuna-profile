@@ -7,7 +7,8 @@ import CardContent from '@mui/material/CardContent';
 import profileImg from '../../assets/image/profile3.jpg';
 import myInfo from '../../mock/myInfo.js';
 
-class AboutMeComponent extends Component {
+class AboutMe extends Component {
+
     render() {
         return (
             <section>
@@ -75,4 +76,4 @@ class AboutMeComponent extends Component {
     }
 }
 
-export default AboutMeComponent;
+export default AboutMe;
