@@ -8,11 +8,26 @@ function Project(props) {
         <div>
             {
                 ProjectArr.map((project, index) => (
-                    <div className="row" key={index}>
+                    <div className={index === ProjectArr.length - 1 ? 'last row' : 'row'} key={index}>
                         <div className="row-left">
-                            <h3>
-                                {project.name}<span className="period-mark">.</span>
-                            </h3>
+                            {project.link === '' &&
+                                <h3 >
+                                    {project.name}<span className="period-mark">.</span>
+                                </h3>
+                            }
+                            {project.link !== '' &&
+                                <h3>
+                                    <a className='service link'
+                                        target={'_blank'}
+                                        rel="noopener noreferrer"
+                                        href={project.link}
+                                    >
+                                        {project.name}
+                                    </a>
+                                    <span className="period-mark">.</span>
+                                </h3>
+                            }
+
                             <span className="role">{project.role}</span>
                             <span>
                                 <time>{project.startDate}</time>~{project.endDate}{project.during}
@@ -21,12 +36,12 @@ function Project(props) {
                         <div className="row-right">
                             <div className="first project">
                                 <h5>
-                                    서비스<span className="period-mark">.</span>
+                                    Service<span className="period-mark">.</span>
                                 </h5>
                                 <p>{project.service}</p>
 
                                 <h5>
-                                    업무<span className="period-mark">.</span>
+                                    Job<span className="period-mark">.</span>
                                 </h5>
                                 <ul>
                                     {
